@@ -1,0 +1,71 @@
+
+#EXERCICE 1#
+
+
+# 1. Afficher le jeu de données iris puis afficher la classe de l'objet iris.
+iris
+class(iris)
+
+# 2. Afficher le jeu de données iris dans une vue avec la fonction View().
+View(iris)
+
+# 3. Afficher le nombre de lignes avec la fonction nrow().
+nrow(iris)
+
+# 4. Afficher le nombre de colonne avec la fonction ncol().
+ncol(iris)
+
+# 5. Afficher le nom des colonnes avec la fonction colnames().
+colnames(iris)
+
+# 6. Afficher un résumé du dataframe avec la fonction summary().
+summary(iris)
+
+# 7. Afficher uniquement les colonnes Sepal.Length et Species.
+iris[, c("Sepal.Length","Species")]
+
+# 9. Afficher uniquement la ligne 100,103 et 105.
+iris[c(100,103,105),]
+
+#10. Afficher uniquement les lignes 50 à 100.
+iris[c(50:100),]
+
+#11. Calculer la moyenne de la variable Sepal.Length.
+mean(iris$Sepal.Length)
+
+#12. Calculer la médiane de la variable Sepal.Width.
+median(iris$Sepal.Width)
+
+#13. Calculer l'écart-type de la variable Petal.Length.
+sd(iris$Petal.Length)
+
+#14. Calculer les déciles de la variable Petal.Width.
+quantile(iris$Petal.Width, probs = seq(from = 0, to = 1, by =0.1))
+
+
+#EXERCICE 2#
+
+
+#1. Importer le jeu de données manga.csv dans un objet appelé dfManga et le jeu de données anime.csv dans un objet appelé dfAnime. 
+#1.bis Puis afficher la classe des deux objets pour vérifier que la classe est data.frame.
+dfManga = read.csv("L:/BUT/SD/Promo 2023/gclairacvuitton/R/manga.csv", header = TRUE, sep = ",", dec = ".")
+dfAnime = read.csv("L:/BUT/SD/Promo 2023/gclairacvuitton/R/anime.csv", header = TRUE, sep = ",", dec = ".")
+class(dfManga)
+class(dfAnime)
+
+#2. Afficher les jeux de données dans des vues pour les visualiser.
+View(dfManga)
+View(dfAnime)
+
+#3. Afficher le nombre de lignes et colonnes avec la fonction dim()
+dim(dfManga)
+dim(dfAnime)
+
+#4. Calculer la moyenne de la variable Score pour les deux dataframe. Quelle est la moyenne la plus élevée ?
+mean(dfAnime$Score)
+mean(dfManga$Score)
+La moyenne la plus élève est celle de dfAnime
+
+#5.Calculer le nombre total de votes de la variable Vote pour les deux dataframe. Ou y a t-il le plus de votes ?
+sum(dfManga$Vote)
+sum(dfAnime$Vote)
