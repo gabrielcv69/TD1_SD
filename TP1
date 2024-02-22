@@ -1,5 +1,6 @@
 
-#EXERCICE 1#
+
+# EXERCICE 1 :
 
 
 # 1. Afficher le jeu de données iris puis afficher la classe de l'objet iris.
@@ -43,7 +44,7 @@ sd(iris$Petal.Length)
 quantile(iris$Petal.Width, probs = seq(from = 0, to = 1, by =0.1))
 
 
-#EXERCICE 2#
+# EXERCICE 2 :
 
 
 #1. Importer le jeu de données manga.csv dans un objet appelé dfManga et le jeu de données anime.csv dans un objet appelé dfAnime. 
